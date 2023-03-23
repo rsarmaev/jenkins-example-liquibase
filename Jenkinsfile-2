@@ -24,6 +24,6 @@ pipeline {
   }
   options {
         timeout(time: 20, unit: 'MINUTES')   // timeout on whole pipeline job
-        buildDiscarder(logRotator(numToKeepStr: env.branch == 'main' ? '' : "5"))
+        buildDiscarder(logRotator(numToKeepStr: env.branch == 'main' ? '' : "3"))
   }
 }
